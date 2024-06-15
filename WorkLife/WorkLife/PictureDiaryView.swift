@@ -78,6 +78,7 @@ struct PictureDiaryView: View {
     @State private var isShowingCameraPicker = false
     @State private var showImageSourceSelection = false
     @State private var characterCount = 0
+    @Binding var isPresented: Bool
     
     let maxDiaryLength = 100 // 최대 입력 길이
     let weatherSymbols = ["sun.max", "cloud.sun", "umbrella", "snow"]
@@ -91,6 +92,23 @@ struct PictureDiaryView: View {
     var body: some View {
         VStack {
             // 일기 상단
+            ZStack{
+                Spacer()
+                Text("일기작성")
+                    .fontWeight(.semibold)
+                Spacer()
+                HStack{
+                    Spacer()
+                    Button(action: {
+                        isPresented = false
+                    }) {
+                        Text("완료")
+                            .foregroundColor(.blue)
+                            .padding()
+                            .cornerRadius(10)
+                    }
+                }
+            }
             HStack {
                 
                 // 날짜
@@ -223,8 +241,8 @@ struct PictureDiaryView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        PictureDiaryView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PictureDiaryView(isPresented: $isPresented)
+//    }
+//}
