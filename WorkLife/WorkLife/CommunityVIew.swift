@@ -10,6 +10,7 @@ import SwiftUI
 struct CommunityView: View {
     //    @Binding var selectColor: Int
     @State private var selectedColor: Int = 0
+    @State var isModalPresented: Bool = false
     
     var body: some View {
         VStack {
@@ -46,6 +47,7 @@ struct CommunityView: View {
                 
                 Spacer()
                 Button(action: {
+                    isModalPresented.toggle()
                 }, label: {
                     Image(systemName: "plus")
                         .foregroundStyle(.black)
@@ -61,13 +63,96 @@ struct CommunityView: View {
                             .foregroundStyle(selectedColor == 0 ? Color(hex:"F5EDC5") : Color(hex:"C2DDB5"))
                         VStack {
                             HStack {
-                                Text("Date")
+                                Text("2024년 6월 15일 토요일")
                                 Spacer()
-                                Text("날씨")
+                                Text("날씨 맑음")
                             }
                             .padding(20)
                             Spacer()
-                            Text("Contents")
+                            Text("하...너무 어렵고도 어려운 나날이다...")
+                        }
+                        .onTapGesture {
+                            
+                        }
+                        .font(.mainBody)
+                        .padding()
+                        .frame(width: 371, height: 317)
+                        
+                    }
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 371, height: 317)
+                            .foregroundStyle(selectedColor == 0 ? Color(hex:"F5EDC5") : Color(hex:"C2DDB5"))
+                        VStack {
+                            HStack {
+                                Text("2024년 6월 10일 목요일")
+                                Spacer()
+                                Text("날씨 비옴")
+                            }
+                            .padding(20)
+                            Spacer()
+                            Text("앙 배고팡")
+                        }
+                        .font(.mainBody)
+                        .padding()
+                        .frame(width: 371, height: 317)
+                        
+                    }
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 371, height: 317)
+                            .foregroundStyle(selectedColor == 0 ? Color(hex:"F5EDC5") : Color(hex:"C2DDB5"))
+                        VStack {
+                            HStack {
+                                Text("2024년 6월 1일 토요일")
+                                Spacer()
+                                Text("날씨 화창")
+                            }
+                            .padding(20)
+                            Spacer()
+                            Text("오늘은 연을 날렸다 우하하")
+                        }
+                        .font(.mainBody)
+                        .padding()
+                        .frame(width: 371, height: 317)
+                        
+                    }
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 371, height: 317)
+                            .foregroundStyle(selectedColor == 0 ? Color(hex:"F5EDC5") : Color(hex:"C2DDB5"))
+                        VStack {
+                            HStack {
+                                Text("2024년 6월 1일 토요일")
+                                Spacer()
+                                Text("날씨 눈")
+                            }
+                            .padding(20)
+                            Spacer()
+                            Text("오늘은 개발을 성공했다!!!!!!!!!!!!!! 최고")
+                        }
+                        .font(.mainBody)
+                        .padding()
+                        .frame(width: 371, height: 317)
+                        
+                    }
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 371, height: 317)
+                            .foregroundStyle(selectedColor == 0 ? Color(hex:"F5EDC5") : Color(hex:"C2DDB5"))
+                        VStack {
+                            HStack {
+                                Text("2024년 6월 1일 토요일")
+                                Spacer()
+                                Text("날씨 화창")
+                            }
+                            .padding(20)
+                            Spacer()
+                            Text("하...오늘은 잘 안됐는데 격려해주셔 그나마 나아졌당...~")
                         }
                         .font(.mainBody)
                         .padding()
@@ -77,6 +162,9 @@ struct CommunityView: View {
                 }
             }
             .frame(maxHeight: .infinity)
+        }
+        .sheet(isPresented: $isModalPresented) {
+            PictureDiaryView(isPresented: $isModalPresented)
         }
     }
 }
