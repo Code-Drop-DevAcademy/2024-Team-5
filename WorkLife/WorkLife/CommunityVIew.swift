@@ -11,6 +11,7 @@ struct CommunityView: View {
     //    @Binding var selectColor: Int
     @State private var selectedColor: Int = 0
     @State var isModalPresented: Bool = false
+    @State private var isActive = false
     
     var body: some View {
         VStack {
@@ -72,8 +73,17 @@ struct CommunityView: View {
                             Text("하...너무 어렵고도 어려운 나날이다...")
                         }
                         .onTapGesture {
-                            CommentView()
+                            isActive = true
                         }
+                        NavigationLink(
+                                           destination: CommentView(),
+                                           isActive: $isActive,
+                                           label: {
+                                               EmptyView()
+                                           }
+                                       )
+                                       .frame(width: 0, height: 0)
+                                       .hidden()
                         .font(.mainBody)
                         .padding()
                         .frame(width: 371, height: 317)
