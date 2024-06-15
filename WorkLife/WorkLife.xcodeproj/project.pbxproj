@@ -14,6 +14,7 @@
 		38EDBF6A2C1CC73D00F15D11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38EDBF692C1CC73D00F15D11 /* Preview Assets.xcassets */; };
 		38EDBF8D2C1D1E5800F15D11 /* CommentWriteLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EDBF8C2C1D1E5800F15D11 /* CommentWriteLayout.swift */; };
 		38EDBF8F2C1D1E7900F15D11 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EDBF8E2C1D1E7900F15D11 /* CommentView.swift */; };
+		38EDBF912C1D303F00F15D11 /* CommunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EDBF902C1D303F00F15D11 /* CommunityDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		38EDBF692C1CC73D00F15D11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38EDBF8C2C1D1E5800F15D11 /* CommentWriteLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentWriteLayout.swift; sourceTree = "<group>"; };
 		38EDBF8E2C1D1E7900F15D11 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		38EDBF902C1D303F00F15D11 /* CommunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				38EDBF682C1CC73D00F15D11 /* Preview Content */,
 				38EDBF8C2C1D1E5800F15D11 /* CommentWriteLayout.swift */,
 				38EDBF8E2C1D1E7900F15D11 /* CommentView.swift */,
+				38EDBF902C1D303F00F15D11 /* CommunityDetailView.swift */,
 			);
 			path = WorkLife;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38EDBF652C1CC73C00F15D11 /* ContentView.swift in Sources */,
+				38EDBF912C1D303F00F15D11 /* CommunityDetailView.swift in Sources */,
 				38EDBF632C1CC73C00F15D11 /* WorkLifeApp.swift in Sources */,
 				24144C812C1CDB2400401867 /* PictureDiaryView.swift in Sources */,
 				38EDBF8F2C1D1E7900F15D11 /* CommentView.swift in Sources */,
