@@ -72,7 +72,7 @@ struct CommunityView: View {
                             Text("하...너무 어렵고도 어려운 나날이다...")
                         }
                         .onTapGesture {
-                            
+                            CommentView()
                         }
                         .font(.mainBody)
                         .padding()
